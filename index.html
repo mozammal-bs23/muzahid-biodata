@@ -4,22 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মোঃ মোজাহিদুল ইসলাম <div class="space-y-3 text-gray-600">
-            <p><strong>সর্বোচ্চ ডিগ্রি:</strong> বিএসসি ইঞ্জিনিয়ারিং ইন নিউক্লিয়ার ইঞ্জিনিয়ারিং</p>
-            <p><strong>প্রতিষ্ঠান:</strong> মিলিটারি ইনস্টিটিউট অফ সায়েন্স এন্ড টেকনোলজি</p>
-            <p><strong>এইচএসসি:</strong> পাবনা ক্যাডেট কলেজ</p>
-            <p><strong>এসএসসি:</strong> পাবনা ক্যাডেট কলেজ</p>
-        </div> - এর জীবনবৃত্তান্ত</title>
+    <title>মোঃ মোজাহিদুল ইসলাম - এর জীবনবৃত্তান্ত</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-    <!-- Chosen Palette: Calm Harmony Neutrals -->
-    <!-- Application Structure Plan: A single-page, multi-section design with a fixed top navigation for smooth scrolling. Sections are logically grouped (About, Education/Career, Family, Preferences) to create a narrative flow, which is more engaging than a static list. This structure improves usability by allowing users to quickly jump to the information they are most interested in. -->
-    <!-- Visualization & Content Choices: Report Info: Personal Details -> Goal: Inform -> Viz/Presentation: Icon-driven key-value pairs in card layout -> Interaction: None -> Justification: Icons make information scannable and visually appealing. Report Info: Section Navigation -> Goal: Organize -> Viz/Presentation: Fixed top navigation bar -> Interaction: Click-to-scroll -> Justification: Provides easy access to all parts of the biodata without manual scrolling. No charts are used as the data is qualitative. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Hind Siliguri', sans-serif;
@@ -60,6 +52,16 @@
             background-color: #E07A5F30;
             color: #E07A5F;
         }
+
+        .download-btn {
+            background: linear-gradient(135deg, #E07A5F, #F4A261);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(224, 122, 95, 0.3);
+        }
     </style>
 </head>
 
@@ -77,6 +79,9 @@
                     <a href="#education" class="nav-link border-b-2 border-transparent pb-1">শিক্ষা ও পেশা</a>
                     <a href="#family" class="nav-link border-b-2 border-transparent pb-1">পারিবারিক তথ্য</a>
                     <a href="#preferences" class="nav-link border-b-2 border-transparent pb-1">যেমন সঙ্গী চাই</a>
+                    <button id="downloadBtn" class="download-btn text-white px-4 py-2 rounded-lg font-medium text-sm">
+                        📄 PDF ডাউনলোড
+                    </button>
                 </div>
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-gray-700 focus:outline-none">
@@ -94,6 +99,10 @@
                 <a href="#education" class="block text-center py-2 rounded nav-link">শিক্ষা ও পেশা</a>
                 <a href="#family" class="block text-center py-2 rounded nav-link">পারিবারিক তথ্য</a>
                 <a href="#preferences" class="block text-center py-2 rounded nav-link">যেমন সঙ্গী চাই</a>
+                <button id="downloadBtnMobile"
+                    class="download-btn text-white px-4 py-2 rounded-lg font-medium text-sm w-full mt-2">
+                    📄 PDF ডাউনলোড
+                </button>
             </div>
         </nav>
     </header>
@@ -131,7 +140,7 @@
                         <div class="space-y-3 text-gray-600">
                             <p><strong>নাম:</strong> মোঃ মোজাহিদুল ইসলাম (সানি)</p>
                             <p><strong>জন্ম তারিখ:</strong> ০১/০১/১৯৯৫</p>
-                            <p><strong>বয়স:</strong> ৩০ বছর (২০২৫ অনুযায়ী)</p>
+                            <p><strong>বয়স:</strong> ৩০ বছর (২০২৫ অনুযায়ী)</p>
                             <p><strong>ধর্ম:</strong> ইসলাম</p>
                             <p><strong>বৈবাহিক অবস্থা:</strong> অবিবাহিত</p>
                         </div>
@@ -246,7 +255,7 @@
                             </tr>
                             <tr class="border-b">
                                 <td class="py-3 px-4 text-center">মা</td>
-                                <td class="py-3 px-4 text-center">মোছাঃ সুফিয়া বেগম</td>
+                                <td class="py-3 px-4 text-center">মোছাঃ সুফিয়া বেগম</td>
                                 <td class="py-3 px-4 text-center">গৃহিণী</td>
                             </tr>
                             <tr class="border-b">
@@ -268,7 +277,6 @@
                     </table>
                 </div>
             </div>
-            </div>
         </section>
 
         <section id="preferences" class="py-20 bg-white">
@@ -279,7 +287,7 @@
                 </div>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2 text-gray-800">ধর্মীয় দৃষ্টিভঙ্গি</h4>
+                        <h4 class="font-semibold text-lg mb-2 text-gray-800">ধর্মীয় দৃষ্টিভঙ্গি</h4>
                         <p class="text-gray-600">ধর্মপ্রাণ ও অনুশীলনকারী মুসলিম, ইসলামিক মূল্যবোধের প্রতি
                             প্রতিশ্রুতিবদ্ধ, সালাতে নিয়মিত।</p>
                     </div>
@@ -344,6 +352,195 @@
                 });
             });
         });
+
+        // PDF Download functionality
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Set font (using Helvetica as it supports basic characters)
+            doc.setFont('helvetica', 'normal');
+
+            let yPos = 20;
+            const pageHeight = doc.internal.pageSize.height;
+            const margin = 20;
+            const lineHeight = 8;
+
+            // Title
+            doc.setFontSize(18);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Md. Mojahidul Islam (Sunny) - Biodata', margin, yPos);
+            yPos += 15;
+
+            // Subtitle
+            doc.setFontSize(12);
+            doc.setFont('helvetica', 'normal');
+            doc.text('Business Analyst', margin, yPos);
+            yPos += 10;
+
+            // Introduction
+            doc.setFontSize(10);
+            const introText = 'Looking for a religious and compatible life partner to build a blessed home with mutual respect, love and trust, Insha Allah.';
+            const splitIntro = doc.splitTextToSize(introText, 170);
+            doc.text(splitIntro, margin, yPos);
+            yPos += splitIntro.length * 6 + 10;
+
+            // Personal Information Section
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Personal Information', margin, yPos);
+            yPos += 10;
+
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+
+            const personalInfo = [
+                'Name: Md. Mojahidul Islam (Sunny)',
+                'Date of Birth: 01/01/1995',
+                'Age: 30 years (as of 2025)',
+                'Religion: Islam',
+                'Marital Status: Unmarried',
+                'Height: 5 feet 8 inches',
+                'Weight: 72 kg',
+                'Complexion: Fair',
+                'Health: Excellent, no major health issues',
+                'Current Address: Mirpur, Dhaka',
+                'Permanent Address: Village: Kumarpur, Post: Birganj, Thana: Birganj, District: Dinajpur',
+                'Languages: Bengali (Fluent), English (Fluent)',
+                'Hobbies: Travel, Sports'
+            ];
+
+            personalInfo.forEach(info => {
+                if (yPos > pageHeight - 30) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                doc.text(info, margin, yPos);
+                yPos += lineHeight;
+            });
+
+            yPos += 10;
+
+            // Education & Career Section
+            if (yPos > pageHeight - 50) {
+                doc.addPage();
+                yPos = 20;
+            }
+
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Education & Career', margin, yPos);
+            yPos += 10;
+
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+
+            const educationInfo = [
+                'Highest Degree: BSc Engineering in Nuclear Science & Engineering',
+                'Institution: Military Institute of Science and Technology',
+                'HSC: Pabna Cadet College',
+                'SSC: Pabna Cadet College',
+                'Profession: Business Analyst',
+                'Company: Skydo',
+                'Workplace: Mirpur, Dhaka'
+            ];
+
+            educationInfo.forEach(info => {
+                if (yPos > pageHeight - 30) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                doc.text(info, margin, yPos);
+                yPos += lineHeight;
+            });
+
+            yPos += 10;
+
+            // Family Information Section
+            if (yPos > pageHeight - 70) {
+                doc.addPage();
+                yPos = 20;
+            }
+
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Family Information', margin, yPos);
+            yPos += 10;
+
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+
+            const familyInfo = [
+                'Father: Md. Majedul Islam - Retired Government Employee',
+                'Mother: Mrs. Sufia Begum - Housewife',
+                'Elder Brother: Major Saidul Islam - Military Officer',
+                'Sister-in-law: Dr. Tasnim Akter Simu - Gynecologist',
+                'Younger Brother: Md. Mojammel Hossen - Software Engineer'
+            ];
+
+            familyInfo.forEach(info => {
+                if (yPos > pageHeight - 30) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                doc.text(info, margin, yPos);
+                yPos += lineHeight;
+            });
+
+            yPos += 10;
+
+            // Partner Preferences Section
+            if (yPos > pageHeight - 50) {
+                doc.addPage();
+                yPos = 20;
+            }
+
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Partner Preferences', margin, yPos);
+            yPos += 10;
+
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+
+            const preferences = [
+                'Religious Perspective: Religious and practicing Muslim, committed to Islamic values, regular in prayers',
+                'Educational Qualification: Minimum HSC, Bachelor\'s degree or higher preferred',
+                'Family Background: From a respectable, religious and educated family',
+                'Height: Minimum 5 feet 8 inches'
+            ];
+
+            preferences.forEach(pref => {
+                if (yPos > pageHeight - 30) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                const wrappedText = doc.splitTextToSize(pref, 170);
+                doc.text(wrappedText, margin, yPos);
+                yPos += wrappedText.length * lineHeight + 2;
+            });
+
+            // Footer
+            yPos += 10;
+            if (yPos > pageHeight - 30) {
+                doc.addPage();
+                yPos = 20;
+            }
+
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'italic');
+            doc.text('Date: July 29, 2025', margin, yPos);
+            yPos += 8;
+            doc.setFont('helvetica', 'bold');
+            doc.text('Md. Mojahidul Islam (Sunny)', margin, yPos);
+
+            // Save the PDF
+            doc.save('Mojahidul_Islam_Biodata.pdf');
+        }
+
+        // Add event listeners for download buttons
+        document.getElementById('downloadBtn').addEventListener('click', generatePDF);
+        document.getElementById('downloadBtnMobile').addEventListener('click', generatePDF);
     </script>
 </body>
 

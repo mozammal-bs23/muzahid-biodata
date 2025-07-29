@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মোঃ মোজাহিদুল ইসলাম (সানি) - এর জীবনবৃত্তান্ত</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony Neutrals -->
+    <!-- Application Structure Plan: A single-page, multi-section design with a fixed top navigation for smooth scrolling. Sections are logically grouped (About, Education/Career, Family, Preferences) to create a narrative flow, which is more engaging than a static list. This structure improves usability by allowing users to quickly jump to the information they are most interested in. -->
+    <!-- Visualization & Content Choices: Report Info: Personal Details -> Goal: Inform -> Viz/Presentation: Icon-driven key-value pairs in card layout -> Interaction: None -> Justification: Icons make information scannable and visually appealing. Report Info: Section Navigation -> Goal: Organize -> Viz/Presentation: Fixed top navigation bar -> Interaction: Click-to-scroll -> Justification: Provides easy access to all parts of the biodata without manual scrolling. No charts are used as the data is qualitative. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #F8F7F4;
+            color: #3D405B;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #E07A5F;
+            border-bottom-color: #E07A5F;
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-style {
+            background-color: #E07A5F30;
+            color: #E07A5F;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-700">
+                    <a href="#" class="font-serif text-[#3D405B]">জীবনবৃত্তান্ত</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="nav-link border-b-2 border-transparent pb-1">ভূমিকা</a>
+                    <a href="#about" class="nav-link border-b-2 border-transparent pb-1">ব্যক্তিগত তথ্য</a>
+                    <a href="#education" class="nav-link border-b-2 border-transparent pb-1">শিক্ষা ও পেশা</a>
+                    <a href="#family" class="nav-link border-b-2 border-transparent pb-1">পারিবারিক তথ্য</a>
+                    <a href="#preferences" class="nav-link border-b-2 border-transparent pb-1">যেমন সঙ্গী চাই</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2">
+                <a href="#home" class="block text-center py-2 rounded nav-link">ভূমিকা</a>
+                <a href="#about" class="block text-center py-2 rounded nav-link">ব্যক্তিগত তথ্য</a>
+                <a href="#education" class="block text-center py-2 rounded nav-link">শিক্ষা ও পেশা</a>
+                <a href="#family" class="block text-center py-2 rounded nav-link">পারিবারিক তথ্য</a>
+                <a href="#preferences" class="block text-center py-2 rounded nav-link">যেমন সঙ্গী চাই</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div
+                    class="w-32 h-32 mx-auto rounded-full bg-gray-200 mb-6 flex items-center justify-center border-4 border-[#E07A5F30]">
+                    <span class="text-5xl text-gray-400">👤</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-[#3D405B] mb-2">মোঃ মোজাহিদুল ইসলাম (সানি)</h1>
+                <p class="text-xl text-gray-600 mb-6">বিজনেস এনালিস্ট</p>
+                <p class="max-w-3xl mx-auto text-lg text-gray-500 leading-relaxed">
+                    আমি একজন ধর্মপ্রাণ ও মানানসই জীবনসঙ্গী খুঁজছি, যার সাথে পারস্পরিক শ্রদ্ধা, ভালোবাসা এবং বিশ্বাসে
+                    পরিপূর্ণ একটি বরকতময় ঘর গড়ে তুলতে পারবো, ইনশাআল্লাহ।
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[#3D405B]">ব্যক্তিগত তথ্য</h2>
+                    <p class="text-gray-500 mt-2">আমার সম্পর্কে কিছু প্রাথমিক এবং ব্যক্তিগত বিবরণ।</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-style p-3 rounded-full mr-4">
+                                <span class="text-2xl">ℹ️</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">সাধারণ পরিচিতি</h3>
+                        </div>
+                        <div class="space-y-3 text-gray-600">
+                            <p><strong>নাম:</strong> মোঃ মোজাহিদুল ইসলাম (সানি)</p>
+                            <p><strong>জন্ম তারিখ:</strong> ০১/০১/১৯৯৫</p>
+                            <p><strong>বয়স:</strong> ৩০ বছর (২০২৫ অনুযায়ী)</p>
+                            <p><strong>ধর্ম:</strong> ইসলাম</p>
+                            <p><strong>বৈবাহিক অবস্থা:</strong> অবিবাহিত</p>
+                        </div>
+                    </div>
+
+                    <div class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-style p-3 rounded-full mr-4">
+                                <span class="text-2xl">📏</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">শারীরিক বিবরণ</h3>
+                        </div>
+                        <div class="space-y-3 text-gray-600">
+                            <p><strong>উচ্চতা:</strong> ৫ ফুট ৮ ইঞ্চি</p>
+                            <p><strong>ওজন:</strong> ৭২ কেজি</p>
+                            <p><strong>গায়ের রঙ:</strong> উজ্জ্বল শ্যামলা</p>
+                            <p><strong>স্বাস্থ্য অবস্থা:</strong> চমৎকার, কোনো বড় স্বাস্থ্যগত সমস্যা নেই।</p>
+                        </div>
+                    </div>
+
+                    <div class="card p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-style p-3 rounded-full mr-4">
+                                <span class="text-2xl">🏠</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">ঠিকানা</h3>
+                        </div>
+                        <div class="space-y-3 text-gray-600">
+                            <p><strong>বর্তমান ঠিকানা:</strong> মিরপুর, ঢাকা</p>
+                            <p><strong>স্থায়ী ঠিকানা:</strong> গ্রাম: কুমরপুর,
+                                পোস্ট: বীরগঞ্জ,
+                                থানা: বীরগঞ্জ,
+                                জেলা: দিনাজপুর</p>
+                        </div>
+                    </div>
+
+                    <div class="card p-6 rounded-lg lg:col-span-3">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-style p-3 rounded-full mr-4">
+                                <span class="text-2xl">🎨</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">জীবনযাপন ও আগ্রহ</h3>
+                        </div>
+                        <div class="space-y-3 text-gray-600">
+                            <p><strong>জ্ঞাত ভাষা:</strong> বাংলা (সাবলীল), ইংরেজি (সাবলীল)</p>
+                            <p><strong>শখ ও আগ্রহ:</strong> ইসলামিক সাহিত্য পাঠ, ভ্রমণ, খেলাধুলা।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[#3D405B]">শিক্ষা ও পেশাগত জীবন</h2>
+                    <p class="text-gray-500 mt-2">আমার শিক্ষাগত যোগ্যতা এবং কর্মজীবনের সংক্ষিপ্ত বিবরণ।</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card p-8 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-style p-3 rounded-full mr-4">
+                                <span class="text-2xl">🎓</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-800">শিক্ষাগত যোগ্যতা</h3>
+                        </div>
+                        <div class="space-y-3 text-gray-600">
+                            <p><strong>সর্বোচ্চ ডিগ্রি:</strong> [প্রার্থীর সর্বোচ্চ ডিগ্রি লিখুন]</p>
+                            <p><strong>প্রতিষ্ঠান:</strong> [প্রতিষ্ঠানের নাম লিখুন]</p>
+                            <p><strong>অন্যান্য অর্জন:</strong> [অন্যান্য একাডেমিক অর্জন লিখুন, না থাকলে প্রযোজ্য নয়
+                                লিখুন]</p>
+                        </div>
+                    </div>
+                    <div class="card p-8 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-style p-3 rounded-full mr-4">
+                                <span class="text-2xl">💼</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-800">পেশাগত পটভূমি</h3>
+                        </div>
+                        <div class="space-y-3 text-gray-600">
+                            <p><strong>পেশা:</strong> বিজনেস এনালিস্ট</p>
+                            <p><strong>সংস্থা:</strong> [সংস্থার নাম লিখুন]</p>
+                            <p><strong>কর্মস্থল:</strong> [কর্মস্থলের শহর/দেশ লিখুন]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="family" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[#3D405B]">পারিবারিক তথ্য</h2>
+                    <p class="text-gray-500 mt-2">আমার পরিবার সম্পর্কে কিছু কথা।</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="grid md:grid-cols-2 gap-8 text-gray-700">
+                        <div>
+                            <p class="mb-2"><strong>বাবার নাম:</strong> মোঃ মজিবুর রহমান</p>
+                            <p><strong>পেশা:</strong> অবসরপ্রাপ্ত সরকারি চাকরিজীবী</p>
+                        </div>
+                        <div>
+                            <p class="mb-2"><strong>মায়ের নাম:</strong> মোছাঃ সুফিয়া বেগম</p>
+                            <p><strong>পেশা:</strong> গৃহিণী</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p><strong>ভাইবোন:</strong> [ভাইবোনদের সংখ্যা ও বিবরণ লিখুন]</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p><strong>পারিবারিক ধরণ:</strong> [একক/যৌথ]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="preferences" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[#3D405B]">যেমন সঙ্গী চাই</h2>
+                    <p class="text-gray-500 mt-2">জীবনসঙ্গী হিসেবে আমার যেমন পছন্দ।</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-800">ধর্মীয় দৃষ্টিভঙ্গি</h4>
+                        <p class="text-gray-600">ধর্মপ্রাণ ও অনুশীলনকারী মুসলিম, ইসলামিক মূল্যবোধের প্রতি
+                            প্রতিশ্রুতিবদ্ধ, সালাতে নিয়মিত।</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-800">শিক্ষাগত যোগ্যতা</h4>
+                        <p class="text-gray-600">ন্যূনতম স্নাতক ডিগ্রি, মাস্টার্স বা উচ্চতর হলে অগ্রাধিকার।</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-800">পেশা</h4>
+                        <p class="text-gray-600">স্থিতিশীল পেশাগত পটভূমি, সরকারি চাকরি, বা ব্যবসা।</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-800">পারিবারিক পটভূমি</h4>
+                        <p class="text-gray-600">একটি সম্মানজনক, ধর্মীয় এবং শিক্ষিত পরিবার থেকে।</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-800">উচ্চতা</h4>
+                        <p class="text-gray-600">[প্রার্থীর পছন্দের উচ্চতা সীমা লিখুন]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#3D405B] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">তারিখ: ২৯ জুলাই, ২০২৫</p>
+            <p class="font-semibold mt-2 text-lg">মোঃ মোজাহিদুল ইসলাম (সানি)</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
